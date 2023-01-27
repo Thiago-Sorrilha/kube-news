@@ -5,7 +5,7 @@ pipeline {
 
         stage ('Build Docker Image') {
             steps {
-                scripts {
+                script {
                     dockerapp = docker.build("tpbsdocker/kube-news:${env.BUILD_ID}", '-f ./src/Dockerfile ./src')
                 }
             }
