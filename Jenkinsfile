@@ -21,6 +21,14 @@ pipeline {
                 }
             }
         }
+
+        stage ('Deploy Kubernetes') {
+            steps{
+                withKubeconfig () {
+                    
+                }       
+            }
+        }
     }
 
 }
