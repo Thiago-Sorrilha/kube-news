@@ -79,7 +79,7 @@ metadata:
   name: web
 spec:
   selector:
-    app: web
+    app: web-news
   ports:
   - port: 80
     targetPort: 8090 # direciona para a porta do pod
