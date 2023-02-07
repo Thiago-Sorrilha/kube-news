@@ -58,7 +58,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: tpbsdocker/kube-news:{{TAG}}
+          image: tpbsdocker/kube-news:latest
           ports:
             - containerPort: 8080
           env: #variaveis para o postgre
