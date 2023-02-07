@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/Thiago-Sorrilha/kube-news.git
     targetRevision: HEAD
-    path: /src/k8s
+    path: k8s
   destination:
     server: https://kubernetes.default.svc
     namespace: kube-news
