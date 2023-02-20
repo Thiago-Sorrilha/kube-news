@@ -12,5 +12,7 @@ spec:
       paths:
        - path: /
          backend:
-          serviceName: web # nome do service que ira ser apontado
-          servicePort: 80
+          service:
+            name: web
+            port:
+              number: 80
