@@ -82,6 +82,6 @@ spec:
     app: web
   ports:
   - port: 80
-    targetPort: 8090 # direciona para a porta do pod
+    targetPort: 8080 # direciona para a porta do pod
   type: LoadBalancer
   #type: LoadBalancer
