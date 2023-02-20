@@ -7,7 +7,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: kube-news.net #endereço do host alvo
+  - host: localhost #endereço do host alvo
     http:
       paths:
        - path: /
