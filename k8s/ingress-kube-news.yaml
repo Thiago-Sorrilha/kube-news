@@ -4,13 +4,14 @@ metadata:
   name: kube-news-ingress #nome do ingress
   namespace: kube-news
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: nginx
 spec:
   rules:
   - host: kube-news.net #endereço do host alvo
     http:
       paths:
        - path: /
+         pathType: Prefix
          backend:
           service:
             name: web
