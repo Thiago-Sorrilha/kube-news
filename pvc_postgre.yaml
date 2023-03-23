@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvcpostgre
+  namespace: kube-news
+spec:
+  storageClassName: openebs-hostpath
+  accessModes:
+   - ReadWriteOnce
+  resources:
+   requests:
+    storage: 2Gi
+
