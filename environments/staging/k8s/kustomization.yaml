@@ -1,0 +1,10 @@
+---
+namespace: staging
+replicas:
+  - name: web
+    count: 2
+images:
+  - name: tpbsdocker/kube-news
+    newTag: v0.1.0
+resources:
+  - ../../../k8s_base
