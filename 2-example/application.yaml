@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kube-news-argocd-updater2
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: tpbsdocker/kube-news:~v0.3
+    argocd-image-updater.argoproj.io/write-back-method: git
+  finalizers:
+      - resources-finalizer.argocd.argoproj.io
+
+spec:
+  project: default
+   
+  source:
+    repoURL: https://github.com/Thiago-Sorrilha/kube-news.git
+    targetRevision: main
+    path: environments/staging/k8s
+  destination:
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: false
+    syncOptions:
+      - Validate=true
+      - CreateNamespace=false
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
+ 
