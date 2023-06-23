@@ -13,7 +13,7 @@ spec:
   project: default
    
   source:
-    repoURL: https://github.com/Thiago-Sorrilha/kube-news.git
+    repoURL: ssh://git@github.com:Thiago-Sorrilha/kube-news.git
     targetRevision: main
     path: environments/staging/k8s
   destination:
